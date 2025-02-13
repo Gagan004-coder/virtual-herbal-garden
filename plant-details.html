@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/plant-details.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 Herbal Garden</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 id="plant-name" class="text-center"></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img id="plant-image" class="img-fluid" alt="Plant">
+            </div>
+            <div class="col-md-6">
+                <p id="plant-description"></p>
+                <h4>Medicinal Uses:</h4>
+                <p id="plant-uses"></p>
+                <button class="btn btn-success" onclick="window.history.back()">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Herbal Garden. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

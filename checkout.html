@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Herbal Garden</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .checkout-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .payment-option input {
+            margin-right: 10px;
+        }
+        .payment-option:hover, .payment-option.selected {
+            background-color: #e0ffe0;
+            border-left: 5px solid #28a745;
+        }
+        .total-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container checkout-container">
+        <h2 class="text-center">💳 Secure Checkout</h2>
+        <hr>
+
+        <!-- Order Summary -->
+        <div class="mb-3">
+            <h4>🛍️ Order Summary</h4>
+            <p><strong>Items:</strong> <span id="total-items">0</span></p>
+            <p><strong>Total Amount:</strong> <span class="total-price" id="total-price">₹0.00</span></p>
+        </div>
+
+        <!-- Payment Methods -->
+        <h4>💰 Select Payment Method</h4>
+        <div id="payment-options">
+            <label class="payment-option selected">
+                <input type="radio" name="payment" value="razorpay" checked> <i class="fab fa-cc-visa"></i> Pay via Razorpay
+            </label>
+            <label class="payment-option">
+                <input type="radio" name="payment" value="cod"> <i class="fas fa-truck"></i> Cash on Delivery
+            </label>
+        </div>
+
+        <button class="btn btn-success w-100 mt-3" id="pay-btn">Proceed with Payment</button>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>

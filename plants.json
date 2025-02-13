@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Aloe Vera",
+      "description": "A medicinal plant known for its healing properties.",
+      "image": "assets/aloe-vera.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Tulsi",
+      "description": "A holy basil plant with many health benefits.",
+      "image": "assets/tulsi.jpg"
+    }
+  ]
+  
